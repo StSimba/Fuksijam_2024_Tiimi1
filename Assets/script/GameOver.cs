@@ -5,12 +5,12 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
     public float lowerLimit = -10f;
-    public GameObject die_txt;
+    //public GameObject die_txt;
     public GameObject menu;
 
     private void Start()
     {
-        die_txt.SetActive(false);
+        //die_txt.SetActive(false);
         menu.SetActive(false);
     }
     public void OnCollisionEnter2D(Collision2D collision)
@@ -18,7 +18,7 @@ public class GameOver : MonoBehaviour
         if (collision.gameObject.tag == "Die")
         {
             EndGame();
-            die_txt.SetActive(true);
+            //die_txt.SetActive(true);
             menu.SetActive(true);
         }
     }

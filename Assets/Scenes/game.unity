@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336f61a89d6af5141a6189fc0a9609cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JousiPrefab: {fileID: 0}
+  JousiPrefab: {fileID: 3336613485987525145, guid: 498ffaef7fecab64daa7aa107a24560d, type: 3}
   JousiCount: 30
 --- !u!1 &252500529
 GameObject:
@@ -295,7 +295,7 @@ RectTransform:
   m_GameObject: {fileID: 252500529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5374, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 433775288}
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3308fe42f276b9a458460c18c27ebd88, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -361,7 +361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &433775288
 RectTransform:
   m_ObjectHideFlags: 0
