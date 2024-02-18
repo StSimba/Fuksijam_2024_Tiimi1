@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 10f;
-    public Rigidbody2D rb;
-
-    public int score = 0;
-    public Text scoreText;
+    private Rigidbody2D rb;
 
     private float moveX;
-    private float highestYPosition = 0f;
+    public float jumpForce = 10f; // Perushyppyvoiman m‰‰r‰
+
+    //private bool isGrounded;
+    public float SpringForce = 20f;
+    
 
     void Awake()
     {
@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxis("Horizontal") * moveSpeed;
+
+        //if (isGrounded = true)
+        //{
+        //    Jump();
+        //}
     }
 
     private void FixedUpdate()
@@ -31,10 +36,31 @@ public class PlayerController : MonoBehaviour
         rb.velocity = velocity;
     }
 
-    private void UpdateScore()
-    {
-        score = Mathf.RoundToInt(highestYPosition);
-        scoreText.text = "Score: " + score.ToString();
-            }
+    //public void Jump()
+    //{
+    //    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+    //}
 
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Ground"))
+    //    {
+    //        isGrounded = true;
+    //    }
+    //}
+
+    //void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Ground"))
+    //    {
+    //        isGrounded = false;
+    //    }
+    //}
+
+    public void IncreaseJumpForce(float extraJumpForce)
+    {
+        jumpForce += extraJumpForce;
+    }
+
+  
 }

@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject platformPrefab;
 
-    public int platformCount = 300;
+    public int platformCount = 250;
 
 
     void Start()
@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < platformCount; i++)
         {
-            spawnPosition.y += Random.Range(.6f, 4f);
-            spawnPosition.x = Random.Range(-5f, 5f);
+            spawnPosition.y += Random.Range(.5f, 3f);
+            spawnPosition.x = Random.Range(-6.5f, 6.5f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }
     }
