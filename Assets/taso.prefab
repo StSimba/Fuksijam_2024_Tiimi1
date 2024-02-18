@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad43624292fc5474ea84c2d2bd32f654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 11
   springforce: 30
 --- !u!50 &6693112281898738795
 Rigidbody2D:
