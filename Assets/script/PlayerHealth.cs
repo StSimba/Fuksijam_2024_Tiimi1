@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -10,7 +11,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth = 3;
-
+    public GameObject die_txt;
+    public GameObject menu;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,8 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Time.timeScale = 0;
+            die_txt.SetActive(true);
+            menu.SetActive(true);
         }
     }
     
