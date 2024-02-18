@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class ChangeSprite : MonoBehaviour
+public class CackeUpgrade : MonoBehaviour
 {
     // Reference to the SpriteRenderer component
     private SpriteRenderer spriteRenderer;
@@ -30,11 +30,22 @@ public class ChangeSprite : MonoBehaviour
         }
     }
 
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Upgrade"))
+        {
+            Debug.Log("Upgraded");
+            
+            ChangeSpriteToNext();
+            
+        }
+
+    }
     // Function to change the sprite to the next one in the list
     public void ChangeSpriteToNext()
     {
-        // Increment the index
-        currentIndex++;
+    
 
         // Wrap around if we reach the end of the list
         if (currentIndex >= spriteList.Count)
@@ -44,5 +55,7 @@ public class ChangeSprite : MonoBehaviour
 
         // Change the sprite
         spriteRenderer.sprite = spriteList[currentIndex];
+        
+        currentIndex++;
     }
 }

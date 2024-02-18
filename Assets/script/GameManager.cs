@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < platformCount; i++)
         {
-            spawnPosition.y += Random.Range(.5f, 3f);
+            spawnPosition.y += Random.Range(.3f, 3f);
             spawnPosition.x = Random.Range(-6.5f, 6.5f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }

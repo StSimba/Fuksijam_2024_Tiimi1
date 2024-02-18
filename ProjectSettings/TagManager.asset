@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - KakkuLapio
   - Die
+  - Upgrade
   layers:
   - Default
   - TransparentFX

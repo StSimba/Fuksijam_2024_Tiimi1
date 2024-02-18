@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    public float lowerLimit = -10f;
+    
     //public GameObject die_txt;
     public GameObject menu;
 
